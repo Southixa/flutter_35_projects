@@ -7,6 +7,7 @@ void main() {
 }
 
 
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,13 +18,14 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: FloatingActionButton(
-          onPressed: () {
-            print('you clicked me');
-          },
-          child: Text('click me'),
-          backgroundColor: Colors.amber,
-        ),
+        child: ElevatedButton.icon(
+            onPressed: () {},
+            style: ButtonStyle(
+             backgroundColor: MaterialStatePropertyAll<Color>(Colors.amber)
+            ),
+            label: Text('mail me'),
+            icon: Icon(Icons.mail),
+          ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

@@ -27,9 +27,11 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text('hello world'),
-          FloatingActionButton(
-            onPressed: (){},
-            backgroundColor: Colors.amber,
+          ElevatedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+             backgroundColor: MaterialStatePropertyAll<Color>(Colors.amber)
+            ),
             child: Text('click me'),
           ),
           Container(

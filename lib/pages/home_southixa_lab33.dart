@@ -37,11 +37,15 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
             child: Column(
               children: [
-                FloatingActionButton(
+                ElevatedButton.icon(
                   onPressed: () {
                     Navigator.pushNamed(context, '/location');
                   },
-                  child: Text('Location', style: TextStyle(fontSize: 10.0),),
+                  style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey)
+                  ),
+                  icon: Icon(Icons.edit_location),
+                  label: Text('Edit Location'),
                 ),
                 SizedBox(height: 20.0),
                 Row(

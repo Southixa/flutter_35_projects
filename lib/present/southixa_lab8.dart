@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Image.asset('assets/pic1.jpg'),
+        child: Image.asset('assets/cat_face.jpg'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

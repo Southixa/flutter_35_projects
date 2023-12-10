@@ -22,12 +22,16 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Column(
           children: [
-            FloatingActionButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/location');
-              },
-              child: Text('Location', style: TextStyle(fontSize: 10.0),),
-            )
+            ElevatedButton.icon(
+            onPressed: () {
+              Navigator.pushNamed(context, '/location');
+            },
+            style: ButtonStyle(
+             backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey)
+            ),
+            icon: Icon(Icons.edit_location),
+            label: Text('Edit Location'),
+          ),
           ],
         ),
       )

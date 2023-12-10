@@ -32,12 +32,16 @@ class QuoteCard extends StatelessWidget {
               )
             ),
             SizedBox(height: 8.0),
-            FloatingActionButton(
-              onPressed: () {
-                delete();
-              },
-              child: Text('delete')
-            )
+            ElevatedButton.icon(
+            onPressed: () {
+              delete();
+            },
+            style: ButtonStyle(
+             backgroundColor: MaterialStatePropertyAll<Color>(Colors.amber)
+            ),
+            icon: Icon(Icons.delete),
+            label: Text('delete quote'),
+          ),
           ]
         ),
       ),
